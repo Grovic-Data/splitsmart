@@ -133,6 +133,9 @@
         const dark = effectiveTheme() === "dark";
         $("#icon-sun").hidden = !dark;
         $("#icon-moon").hidden = dark;
+        // barra do browser mobile acompanha o tema (valor vem do token --bg, não de hex duplicado)
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.content = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim();
     }
 
     // ---------- i18n ----------

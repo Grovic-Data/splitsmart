@@ -833,7 +833,7 @@ details.quick summary {
 
 @media (max-width: 560px) {
     .part-row {
-        grid-template-columns: 1fr 1fr 36px;
+        grid-template-columns: 1fr 1fr 44px;
     }
 
     .field-name {
@@ -842,6 +842,24 @@ details.quick summary {
 
     .btn-lg {
         width: 100%;
+    }
+
+    /* alvo de toque confortável (~44px) em tela pequena */
+    .btn,
+    input[type="text"],
+    input[type="number"] {
+        height: 44px;
+    }
+
+    .icon-btn {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* 16px+ evita o zoom automático do iOS ao focar input */
+    input[type="text"],
+    input[type="number"] {
+        font-size: 1rem;
     }
 }
 
