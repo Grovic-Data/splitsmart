@@ -6,10 +6,10 @@
 
 🌐 **[splitsmart.grovicdata.com](https://splitsmart.grovicdata.com)**
 
-![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-4E32A8)
-![Vanilla JS](https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-6E56CF)
-![Privacidade](https://img.shields.io/badge/privacidade-nenhum%20upload-8F7EE2)
-![i18n](https://img.shields.io/badge/i18n-pt--BR%20%2B%20en-C1BDF6)
+![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-1E4FCC)
+![Vanilla JS](https://img.shields.io/badge/stack-vanilla%20HTML%2FCSS%2FJS-4076EA)
+![Privacidade](https://img.shields.io/badge/privacidade-nenhum%20upload-6190E8)
+![i18n](https://img.shields.io/badge/i18n-pt--BR%20%2B%20en-9DB7F2)
 
 </div>
 

@@ -1,7 +1,7 @@
 /*
  * SplitSMART — styles.css
- * Paleta oficial Grovic (mesma base do ProntuSMART, Design 2026):
- * #4E32A8 #6E56CF #8F7EE2 #C1BDF6 #F4F2FF · neutros slate no dark.
+ * Paleta oficial Grovic Data (mesma visão de grovicdata.com / valerium.grovicdata.com):
+ * navy quase-preto #020308 / superfícies #0A0D1A no dark · accent azul #1E4FCC→#4076EA.
  * Cores SÓ via tokens (--*) — zero hex literal fora deste bloco de tokens.
  *
  * Tema em 3 estados (padrão da casa p/ compat com host claro/escuro):
@@ -15,27 +15,27 @@
     color-scheme: light;
 
     /* escala de marca (constante nos dois temas) */
-    --brand-300: #A79FEE;
-    --brand-400: #8F7EE2;
-    --brand-500: #6E56CF;
-    --brand-700: #4E32A8;
-    --brand-950: #1C1140;
+    --brand-300: #6190E8;
+    --brand-400: #4076EA;
+    --brand-500: #1E4FCC;
+    --brand-700: #0E2C7A;
+    --brand-950: #020308;
 
-    --bg: #F4F2FF;
+    --bg: #F5F7FC;
     --card: #FFFFFF;
     --elevated: #FFFFFF;
-    --text: #0F172A;
-    --text-soft: #334155;
-    --muted: #64748B;
-    --border: #E2E8F0;
-    --border-strong: #CBD5E1;
+    --text: #0B0F1E;
+    --text-soft: #333B52;
+    --muted: #5C667F;
+    --border: #E2E6F0;
+    --border-strong: #C9D0E0;
 
-    --accent: #4E32A8;
-    --accent-hover: #3E2889;
+    --accent: #1E4FCC;
+    --accent-hover: #16389B;
     --on-accent: #FFFFFF;
-    --accent-soft: #E8E4FB;
-    --accent-soft-text: #3E2889;
-    --ring: #6E56CF;
+    --accent-soft: #E4EBFB;
+    --accent-soft-text: #16389B;
+    --ring: #4076EA;
 
     --error: #B3261E;
     --error-bg: #FBEAE9;
@@ -43,7 +43,9 @@
     --warn: #8A5A00;
     --warn-bg: #FFF4DC;
 
-    --shadow: 0 1px 2px rgba(28, 17, 64, 0.05), 0 10px 30px rgba(28, 17, 64, 0.07);
+    --title-gradient: linear-gradient(180deg, #0B0F1E 0%, #55607E 100%);
+
+    --shadow: 0 1px 2px rgba(10, 13, 26, 0.05), 0 10px 30px rgba(10, 13, 26, 0.07);
 
     /* tipografia fluida (escala da família, quebra bem em 320-360px) */
     --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -59,50 +61,52 @@
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
         color-scheme: dark;
-        --bg: #020617;
-        --card: #0F172A;
-        --elevated: #1E293B;
-        --text: #F8FAFC;
-        --text-soft: #CBD5E1;
-        --muted: #94A3B8;
-        --border: #1E293B;
-        --border-strong: #334155;
-        --accent: #8F7EE2;
-        --accent-hover: #A79FEE;
-        --on-accent: #1C1140;
-        --accent-soft: #2E1E66;
-        --accent-soft-text: #C1BDF6;
-        --ring: #8F7EE2;
-        --error: #F28B82;
-        --error-bg: #3B1512;
-        --success: #5BBE8B;
-        --warn: #E4B65E;
-        --warn-bg: #33260C;
+        --bg: #020308;
+        --card: #0A0D1A;
+        --elevated: #11152A;
+        --text: #F7F8FB;
+        --text-soft: #C4CBDC;
+        --muted: #8E97AD;
+        --border: #1A1F36;
+        --border-strong: #262D4A;
+        --accent: #4076EA;
+        --accent-hover: #6190E8;
+        --on-accent: #FFFFFF;
+        --accent-soft: #101C42;
+        --accent-soft-text: #9DB7F2;
+        --ring: #4076EA;
+        --error: #F87171;
+        --error-bg: #2B1113;
+        --success: #4ADE80;
+        --warn: #FBBF24;
+        --warn-bg: #2A2008;
+        --title-gradient: linear-gradient(180deg, #F7F8FB 0%, #565E78 100%);
         --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 }
 
 :root[data-theme="dark"] {
     color-scheme: dark;
-    --bg: #020617;
-    --card: #0F172A;
-    --elevated: #1E293B;
-    --text: #F8FAFC;
-    --text-soft: #CBD5E1;
-    --muted: #94A3B8;
-    --border: #1E293B;
-    --border-strong: #334155;
-    --accent: #8F7EE2;
-    --accent-hover: #A79FEE;
-    --on-accent: #1C1140;
-    --accent-soft: #2E1E66;
-    --accent-soft-text: #C1BDF6;
-    --ring: #8F7EE2;
-    --error: #F28B82;
-    --error-bg: #3B1512;
-    --success: #5BBE8B;
-    --warn: #E4B65E;
-    --warn-bg: #33260C;
+    --bg: #020308;
+    --card: #0A0D1A;
+    --elevated: #11152A;
+    --text: #F7F8FB;
+    --text-soft: #C4CBDC;
+    --muted: #8E97AD;
+    --border: #1A1F36;
+    --border-strong: #262D4A;
+    --accent: #4076EA;
+    --accent-hover: #6190E8;
+    --on-accent: #FFFFFF;
+    --accent-soft: #101C42;
+    --accent-soft-text: #9DB7F2;
+    --ring: #4076EA;
+    --error: #F87171;
+    --error-bg: #2B1113;
+    --success: #4ADE80;
+    --warn: #FBBF24;
+    --warn-bg: #2A2008;
+    --title-gradient: linear-gradient(180deg, #F7F8FB 0%, #565E78 100%);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
@@ -353,6 +357,11 @@ body.busy {
     line-height: 1.15;
     text-wrap: balance;
     margin-bottom: 14px;
+    /* gradiente vertical no título — assinatura do design grovicdata.com */
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
 .privacy-note {
