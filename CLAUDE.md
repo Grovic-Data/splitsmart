@@ -33,7 +33,7 @@ node --check js/app.js            # syntax check rápido de um arquivo
 python -m http.server 8080        # dev local (file:// quebra por causa da CSP — usar servidor)
 ```
 
-Deploy = push pra `main` com GitHub Pages ligado (Settings → Pages → *Deploy from a branch* → `main` + `/ (root)`). `.nojekyll` já commitado. Sem CI obrigatório — gate é local.
+Deploy = push pra `main` com GitHub Pages ligado (Settings → Pages → *Deploy from a branch* → `main` + `/ (root)`). `.nojekyll` já commitado. Sem CI obrigatório — gate é local. **Live**: [splitsmart.grovicdata.com](https://splitsmart.grovicdata.com) (repo [Grovic-Data/splitsmart](https://github.com/Grovic-Data/splitsmart), domínio custom via arquivo `CNAME` + registro CNAME no DNS Hostinger `splitsmart` → `grovic-data.github.io`).
 
 ## 3. Mapa de arquivos
 

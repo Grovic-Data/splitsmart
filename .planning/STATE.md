@@ -6,7 +6,7 @@
 
 **Fase 1 — MVP completo: CONCLUÍDA (2026-08-11)**
 
-**Publicado (2026-08-11):** repo [github.com/G2Martins/splitsmart](https://github.com/G2Martins/splitsmart) (público) · live em **<https://g2martins.github.io/splitsmart/>** (Pages, branch `main` + `/ (root)`).
+**Publicado (2026-08-11):** repo [github.com/Grovic-Data/splitsmart](https://github.com/Grovic-Data/splitsmart) (público, org Grovic-Data) · live em **<https://splitsmart.grovicdata.com>** (GitHub Pages, branch `main` + `/ (root)`, domínio custom via `CNAME` — DNS na Hostinger apontando `splitsmart` → `grovic-data.github.io`).
 
 Entregue:
 - App single-page vanilla (index + core/app/i18n/theme-init + styles) com CSP estrita.
