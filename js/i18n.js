@@ -15,6 +15,9 @@
             "a11y.skip": "Pular para o conteúdo",
             "lang.toggle.aria": "Mudar para inglês",
             "theme.toggle.aria": "Alternar tema claro/escuro",
+            "nav.aria": "Navegação principal",
+            "nav.how": "Como funciona",
+            "nav.privacy": "Privacidade",
 
             "step1.title": "Escolha os PDFs",
             "dropzone.cta": "Arraste PDFs aqui",
@@ -75,6 +78,10 @@
             "reset.confirm": "Descartar todos os PDFs e as partes configuradas?",
 
             "footer.note": "100% no seu navegador · nenhum arquivo é enviado a servidores · projeto da família Grovic",
+            "footer.tagline": "Divida PDFs em partes com nome — 100% no seu navegador.",
+            "footer.product": "Produto",
+            "footer.family": "Família Grovic",
+            "footer.rights": "© 2026 Grovic. Todos os direitos reservados.",
         },
 
         "en": {
@@ -84,6 +91,9 @@
             "a11y.skip": "Skip to content",
             "lang.toggle.aria": "Switch to Portuguese",
             "theme.toggle.aria": "Toggle light/dark theme",
+            "nav.aria": "Main navigation",
+            "nav.how": "How it works",
+            "nav.privacy": "Privacy",
 
             "step1.title": "Choose your PDFs",
             "dropzone.cta": "Drag PDFs here",
@@ -144,6 +154,10 @@
             "reset.confirm": "Discard all PDFs and the parts you set up?",
 
             "footer.note": "100% in your browser · no file is ever uploaded · a Grovic family project",
+            "footer.tagline": "Split PDFs into named parts — 100% in your browser.",
+            "footer.product": "Product",
+            "footer.family": "Grovic family",
+            "footer.rights": "© 2026 Grovic. All rights reserved.",
         },
     };
 

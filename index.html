@@ -17,12 +17,16 @@
 <body>
     <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
 
-    <div class="container">
-        <header class="site-header">
+    <header class="site-header">
+        <div class="container header-inner">
             <div class="brand">
                 <span class="brand-badge" aria-hidden="true">&#x2702;&#xFE0E;</span>
                 <span class="wordmark">Split<b>SMART</b></span>
             </div>
+            <nav class="header-nav" data-i18n-aria="nav.aria" aria-label="Navegação principal">
+                <a href="#step-1" data-i18n="nav.how">Como funciona</a>
+                <a href="#privacy" data-i18n="nav.privacy">Privacidade</a>
+            </nav>
             <div class="header-controls">
                 <button id="theme-toggle" type="button" class="icon-btn" data-i18n-aria="theme.toggle.aria"
                     aria-label="Alternar tema claro/escuro">
@@ -49,13 +53,17 @@
                 </button>
                 <button id="lang-toggle" type="button" class="icon-btn lang-btn" data-i18n-aria="lang.toggle.aria"
                     aria-label="Mudar para inglês">EN</button>
+                <a class="btn btn-outline btn-sm header-cta" href="https://github.com/Grovic-Data/splitsmart"
+                    rel="noopener">GitHub</a>
             </div>
-        </header>
+        </div>
+    </header>
 
+    <div class="container">
         <main id="main">
             <section class="hero">
                 <h1 data-i18n="app.tagline">Divida seus PDFs em partes com nome, direto no navegador</h1>
-                <p class="privacy-note">
+                <p class="privacy-note" id="privacy">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" aria-hidden="true">
                         <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
@@ -127,12 +135,41 @@
                 </div>
             </section>
         </main>
-
-        <footer class="site-footer">
-            <p data-i18n="footer.note">100% no seu navegador · nenhum arquivo é enviado a servidores · projeto da
-                família Grovic</p>
-        </footer>
     </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="brand">
+                    <span class="brand-badge" aria-hidden="true">&#x2702;&#xFE0E;</span>
+                    <span class="wordmark">Split<b>SMART</b></span>
+                </div>
+                <p class="footer-tagline" data-i18n="footer.tagline">Divida PDFs em partes com nome — 100% no seu
+                    navegador.</p>
+            </div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <h3 class="footer-col-title" data-i18n="footer.product">Produto</h3>
+                    <a href="#step-1" data-i18n="nav.how">Como funciona</a>
+                    <a href="#privacy" data-i18n="nav.privacy">Privacidade</a>
+                    <a href="https://github.com/Grovic-Data/splitsmart" rel="noopener">GitHub</a>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-col-title" data-i18n="footer.family">Família Grovic</h3>
+                    <a href="https://grovicdata.com" rel="noopener">Grovic Data</a>
+                    <a href="https://valerium.grovicdata.com" rel="noopener">Valerium Portal</a>
+                    <a href="https://prontusmart.grovicdata.com" rel="noopener">ProntuSMART</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p data-i18n="footer.rights">© 2026 Grovic. Todos os direitos reservados.</p>
+                <p data-i18n="footer.note">100% no seu navegador · nenhum arquivo é enviado a servidores · projeto da
+                    família Grovic</p>
+            </div>
+        </div>
+    </footer>
 
     <noscript>
         <div class="container">
