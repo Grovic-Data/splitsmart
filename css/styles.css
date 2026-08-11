@@ -235,6 +235,16 @@ body.busy {
     color: var(--text);
 }
 
+.header-nav a[aria-current="page"] {
+    color: var(--text);
+}
+
+/* .brand pode ser <a> (páginas internas) — mesma cara do <div> */
+a.brand {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* âncoras não somem embaixo da barra sticky */
 .step,
 .privacy-note {
@@ -867,6 +877,61 @@ details.quick summary {
     margin-top: 16px;
 }
 
+/* ---------- páginas estáticas (como-funciona / privacidade) ---------- */
+
+.page {
+    padding-block: 36px 8px;
+}
+
+.page h1 {
+    font-size: var(--fs-3xl);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin-bottom: 14px;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.page-intro {
+    color: var(--text-soft);
+    max-width: 62ch;
+}
+
+.page .step p {
+    color: var(--text-soft);
+    max-width: 65ch;
+}
+
+.page .step p + h3,
+.page .step p + p {
+    margin-top: 10px;
+}
+
+.page-sub {
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+}
+
+.page-list {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--text-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 65ch;
+}
+
+.page .cta-row {
+    margin-top: 34px;
+}
+
 /* ---------- footer (colunas, padrão Valerium) ---------- */
 
 .site-footer {
@@ -938,9 +1003,8 @@ details.quick summary {
 /* ---------- responsivo ---------- */
 
 @media (max-width: 700px) {
-    /* mobile: header só marca + toggles; nav e CTA vivem no footer */
-    .header-nav,
-    .header-cta {
+    /* mobile: header só marca + toggles; nav vive no footer */
+    .header-nav {
         display: none;
     }
 }

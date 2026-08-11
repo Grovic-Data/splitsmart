@@ -4,7 +4,7 @@
 
 ## Contexto
 
-App estático de página única pra dividir PDFs em partes nomeadas, hospedado em GitHub Pages. Requisito de produto: rodar **sem hospedagem própria** e ser operável por **usuário não-técnico**. Requisito de segurança: **nenhum byte do PDF sai do browser** (ver [security.md](security.md)).
+App estático pra dividir PDFs em partes nomeadas, hospedado em GitHub Pages: `index.html` (o app) + duas páginas de conteúdo (`como-funciona.html`, `privacidade.html`) com o mesmo header/footer/CSP, cujo chrome (tema+idioma) vem de `js/page.js`. Requisito de produto: rodar **sem hospedagem própria** e ser operável por **usuário não-técnico**. Requisito de segurança: **nenhum byte do PDF sai do browser** (ver [security.md](security.md)).
 
 ## Fluxo de dados
 

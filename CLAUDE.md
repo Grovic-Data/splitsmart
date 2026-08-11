@@ -39,7 +39,9 @@ Deploy = push pra `main` com GitHub Pages ligado (Settings → Pages → *Deploy
 
 | Arquivo | Papel |
 |---|---|
-| [index.html](index.html) | página única; **CSP via `<meta>`**; templates `<template>` de ícones SVG; todo texto com `data-i18n` |
+| [index.html](index.html) | página principal (o app); **CSP via `<meta>`**; templates `<template>` de ícones SVG; todo texto com `data-i18n` |
+| [como-funciona.html](como-funciona.html) · [privacidade.html](privacidade.html) | páginas estáticas de conteúdo (mesmo header/footer/CSP do index; chrome via `page.js`) |
+| [js/page.js](js/page.js) | tema + idioma das páginas estáticas (espelha as chaves de storage do app.js; NÃO carrega pdf-lib/app) |
 | [js/core.js](js/core.js) | **funções puras** (sanitize de filename, magic-bytes, parser de intervalos, validação, dedupe) — único lugar com lógica de dado; testado em Node |
 | [js/app.js](js/app.js) | estado + render + orquestração pdf-lib/JSZip; **nunca** `innerHTML` |
 | [js/i18n.js](js/i18n.js) | dicionários pt-BR + en (chaves simétricas), `makeT`/`plural` |

@@ -9,7 +9,7 @@
  * Rodar: node scripts/check-i18n-keys.mjs  (exit 1 em falha)
  */
 import { createRequire } from "node:module";
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -30,16 +30,22 @@ const resolve = (key, origem) => {
     if (!known.has(key)) errors.push(`chave inexistente (${origem}): ${key}`);
 };
 
-// 2. index.html
-const html = readFileSync(join(root, "index.html"), "utf8");
-for (const m of html.matchAll(/data-i18n(?:-aria)?="([^"]+)"/g)) resolve(m[1], "index.html");
+// 2. todo .html da raiz (data-i18n / data-i18n-aria / data-doc-title)
+const pages = readdirSync(root).filter((f) => f.endsWith(".html"));
+for (const page of pages) {
+    const html = readFileSync(join(root, page), "utf8");
+    for (const m of html.matchAll(/data-i18n(?:-aria)?="([^"]+)"/g)) resolve(m[1], page);
+    for (const m of html.matchAll(/data-doc-title="([^"]+)"/g)) resolve(m[1], page);
+}
 
-// 3 + 4. app.js
-const app = readFileSync(join(root, "js", "app.js"), "utf8");
-for (const m of app.matchAll(/\bt\("([^"]+)"/g)) resolve(m[1], "app.js t()");
-for (const m of app.matchAll(/i18n\.plural\(t,\s*"([^"]+)"/g)) {
-    resolve(m[1] + ".one", "app.js plural()");
-    resolve(m[1] + ".other", "app.js plural()");
+// 3 + 4. app.js + page.js
+for (const jsFile of ["app.js", "page.js"]) {
+    const app = readFileSync(join(root, "js", jsFile), "utf8");
+    for (const m of app.matchAll(/\bt\("([^"]+)"/g)) resolve(m[1], jsFile + " t()");
+    for (const m of app.matchAll(/i18n\.plural\(t,\s*"([^"]+)"/g)) {
+        resolve(m[1] + ".one", jsFile + " plural()");
+        resolve(m[1] + ".other", jsFile + " plural()");
+    }
 }
 
 // chaves dinâmicas conhecidas (entry.errorKey) — garantir que o conjunto existe
@@ -52,4 +58,4 @@ if (errors.length) {
     for (const e of errors) console.error("  - " + e);
     process.exit(1);
 }
-console.log(`i18n ok: ${pt.length} chaves simétricas, usos de index.html e app.js resolvem.`);
+console.log(`i18n ok: ${pt.length} chaves simétricas, usos de ${pages.join(", ")}, app.js e page.js resolvem.`);
