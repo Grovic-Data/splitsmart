@@ -6,6 +6,8 @@
 
 **Fase 1 — MVP completo: CONCLUÍDA (2026-08-11)**
 
+**Publicado (2026-08-11):** repo [github.com/G2Martins/splitsmart](https://github.com/G2Martins/splitsmart) (público) · live em **<https://g2martins.github.io/splitsmart/>** (Pages, branch `main` + `/ (root)`).
+
 Entregue:
 - App single-page vanilla (index + core/app/i18n/theme-init + styles) com CSP estrita.
 - Upload multi-PDF (drag&drop + picker), magic-bytes, tratamento cifrado/corrompido.
