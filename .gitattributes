@@ -1,0 +1,3 @@
+# LF em tudo (bate com o .editorconfig); vendors byte-exatos pra manter os SHA-256 do VENDOR.md
+* text=auto eol=lf
+vendor/*.js -text
